@@ -42,6 +42,10 @@ public class Lienzo implements ILienzo {
 			circulo.setCoordY(coordY);
 
 		}
+		
+//	public void transformarCirculo(Circulo circulo) {
+//		
+//	}
 
 	}
 
