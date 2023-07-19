@@ -9,7 +9,7 @@ public class Cuadrado extends Figura {
 	}
 
 	public Cuadrado(int id, int coordX, int coordY, String color, int lado) {
-
+		super(id, coordX, coordY, color);
 		this.lado = lado;
 
 	}

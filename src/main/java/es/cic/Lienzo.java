@@ -6,17 +6,20 @@ public class Lienzo implements ILienzo {
 
 	private final int altoLienzo = 1000000;
 	private final int anchoLienzo = 1000000;
-	private ArrayList<Circulo> circulos = new ArrayList<>();
+	private ArrayList<Figura> figuras = new ArrayList<>();
 
 	public Lienzo() {
 
 	}
 
+	/**
+	 * Dibujar las figuras
+	 */
 	public void crearCirculo(int id, int coordX, int coordY, String color, int radio) {
 		Circulo circulo = new Circulo(id, coordX, coordY, color, radio);
 
 		if (coordX < anchoLienzo && coordY < altoLienzo) {
-			circulos.add(circulo);
+			figuras.add(circulo);
 		} else {
 			throw new RuntimeException("La figura debe estar dentro del lienzo");
 		}
@@ -25,10 +28,10 @@ public class Lienzo implements ILienzo {
 
 	public void eliminarCirculo(Circulo circulo) {
 
-		for (int i = 0; i > circulos.size(); i++) {
+		for (int i = 0; i > figuras.size(); i++) {
 
-			if (circulo.getId() == circulos.get(i).getId()) {
-				circulos.remove(circulo);
+			if (circulo.getId() == figuras.get(i).getId()) {
+				figuras.remove(circulo);
 			}
 		}
 

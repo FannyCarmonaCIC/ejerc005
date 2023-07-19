@@ -10,7 +10,7 @@ public class Circulo extends Figura {
 	}
 	
 	public Circulo(int id, int coordX, int coordY, String color, int radio) {
-
+		super(id, coordX, coordY, color);
 		this.radio = radio;
 
 	}
