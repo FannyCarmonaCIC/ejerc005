@@ -23,6 +23,12 @@ public class Circulo extends Figura {
 	public void setRadio(int radio) {
 		this.radio = radio;
 	}
+
+	@Override
+	public String toString() {
+		return "Circulo [radio=" + radio + ", id=" + id + ", coordX=" + coordX + ", coordY=" + coordY + ", color="
+				+ color + "]";
+	}
 	
 
 }

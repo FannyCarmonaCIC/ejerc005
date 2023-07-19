@@ -24,5 +24,29 @@ class LienzoTest {
 		assertEquals(23, circulo.getId());
 		
 	}
+	
+//	@Test
+//	void testCrearCirculoSaliendoDelLienzo() {
+//		
+//		cut.crearCirculo(23, 1000001, 300, "rojo", 13);
+//		Figura circulo = cut.buscar(23);
+//		
+//		assertT;
+//		
+//	}
+	
+	
+//	@Test
+//	void testEliminarFigura() {
+//		
+//		cut.crearCirculo(30, 300, 300, "rojo", 13);
+//		cut.buscar(30);
+//		cut.eliminar(30);
+//		
+//		Figura circulo = cut.buscar(30);
+//		
+//		assertNull(circulo);
+//		
+//	}
 
 }

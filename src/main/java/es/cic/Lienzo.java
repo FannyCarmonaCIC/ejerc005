@@ -28,13 +28,17 @@ public class Lienzo implements ILienzo {
 
 	public void eliminar(int id) {
 
-		for (int i = 0; i > figuras.size(); i++) {
+		for (int i = 0; i < figuras.size(); i++) {
+			Figura figura = figuras.get(i);
 
-			if (id == figuras.get(i).getId()) {
-				figuras.remove(figuras.get(i));
-				break;
+			if (id == figura.getId()) {
+				figuras.remove(figura);
+				return;
 			}
 		}
+		
+		throw new RuntimeException("No se puede borrar la figura");
+		
 
 	}
 
