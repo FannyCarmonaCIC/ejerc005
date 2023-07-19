@@ -26,12 +26,13 @@ public class Lienzo implements ILienzo {
 
 	}
 
-	public void eliminarCirculo(Circulo circulo) {
+	public void eliminar(int id) {
 
 		for (int i = 0; i > figuras.size(); i++) {
 
-			if (circulo.getId() == figuras.get(i).getId()) {
-				figuras.remove(circulo);
+			if (id == figuras.get(i).getId()) {
+				figuras.remove(figuras.get(i));
+				break;
 			}
 		}
 
@@ -45,11 +46,22 @@ public class Lienzo implements ILienzo {
 			circulo.setCoordY(coordY);
 
 		}
-		
+
+	}
+
+	public Figura buscar(int id) {
+
+		for (int i = 0; i < figuras.size(); i++) {
+			if (id == figuras.get(i).getId()) {
+				return figuras.get(i);
+			}
+		}
+
+		throw new RuntimeException("No se encuentra la figura");
+	}
+
 //	public void transformarCirculo(Circulo circulo) {
 //		
 //	}
-
-	}
 
 }
