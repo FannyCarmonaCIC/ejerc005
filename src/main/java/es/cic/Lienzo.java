@@ -54,14 +54,16 @@ public class Lienzo implements ILienzo {
 	}
 
 	public Figura buscar(int id) {
+		
+		Figura figuraEncontrada = null;
 
 		for (int i = 0; i < figuras.size(); i++) {
 			if (id == figuras.get(i).getId()) {
-				return figuras.get(i);
+				figuraEncontrada = figuras.get(i);
 			}
 		}
 
-		throw new RuntimeException("No se encuentra la figura");
+		return figuraEncontrada;
 	}
 
 //	public void transformarCirculo(Circulo circulo) {
